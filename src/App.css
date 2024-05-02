@@ -1,38 +1,229 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.green_box {
+    height: 100vh;
+    background: #899C92;
+    max-width: 1920px;
+    width: 100%;
+    transition: 300ms linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blue_box {
+    max-width: 1920px;
+    background: #6F8190;
+    height: 100vh;
+    width: 100%;
+    transition: 300ms linear;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav_text {
+    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36.31px;
+    color: black;
+    text-decoration: none;
+}
+.gap-262{
+    gap: 262px;
 }
 
-.App-link {
-  color: #61dafb;
+.yellow_box {
+    max-width: 1920px;
+    background: #DDD4BA;
+    height: 100vh;
+    transition: 300ms linear;
+    width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
+
+
+.greenshoes {
+    width: 542px;
+    margin-top: -100px;
+    height: 495px;
+    transition: 300ms linear;
+    transform: rotate(30deg);
+}
+
+.blueshoes {
+    width: 576px;
+    height: 336px;
+    transition: 300ms linear;
+    transform: rotate(30deg);
+}
+
+.max-w {
+    max-width: 1920px;
+}
+
+.yellow_box:hover .blueshoes {
     transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    transition: 300ms linear;
+}
+
+.green_box:hover .greenshoes {
+    transform: rotate(0deg);
+    transition: 300ms linear;
+}
+
+.blue_box:hover .blueshoes {
+    transform: rotate(0deg);
+    transition: 300ms linear;
+}
+
+.blue_box:hover+.yellow_box {
+    max-width: 288px;
+    transition: 300ms linear;
+}
+
+.blue_box:has(+.yellow_box:hover) {
+    max-width: 288px;
+}
+
+.green_box:has(+ * +.yellow_box) {
+    max-width: 288px;
+}
+
+
+.green_box:hover {
+    max-width: 1920px !important;
+    justify-content: center;
+}
+
+.green_box:hover+.blue_box {
+    max-width: 288px;
+}
+
+.green_box:hover+*+.yellow_box {
+    max-width: 288px;
+}
+
+
+
+@media (max-width:992px) {
+    .greenshoes {
+        width: 265.83px;
+        height: 242.78px;
+    }
+
+    .blueshoes {
+        width: 282.51px;
+        height: 164.8px;
+    }
+
+    .blue_box:hover+.yellow_box {
+        max-width: 177px;
+        transition: 300ms linear;
+    }
+
+    .blue_box:has(+.yellow_box:hover) {
+        max-width: 177px;
+    }
+
+    .green_box:has(+ * +.yellow_box) {
+        max-width: 177px;
+    }
+
+
+    .green_box:hover {
+        max-width: 1920px !important;
+        justify-content: center;
+    }
+
+    .green_box:hover+.blue_box {
+        max-width: 177px;
+    }
+
+    .green_box:hover+*+.yellow_box {
+        max-width: 177px;
+    }
+    .mobile_view {
+        position: absolute;
+        background-color: transparent;
+        backdrop-filter: blur(50px);
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: -10%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 300ms linear;
+        position: fixed;
+        z-index: 3;
+      }
+   
+    
+      .start_0 {
+        left: 0;
+      }
+    
+      .overflow_hidden {
+        overflow: hidden;
+      }
+    
+      .start_100 {
+        left: -100% !important;
+      }
+    
+
+
+}
+
+@media (max-width:768px) {
+    .gap-262{
+        gap: 180px;
+    }
+    
+}
+@media (max-width:576px) {
+    .greenshoes {
+        width: 132.88px;
+        height: 121.36px;
+
+    }
+
+    .blueshoes {
+        width: 141.22px;
+        height: 82.38px;
+    }
+    .gap-262{
+        gap: 140px;
+    }
+
+    .blue_box:hover+.yellow_box {
+        max-width: 92px;
+        transition: 300ms linear;
+    }
+
+    .blue_box:has(+.yellow_box:hover) {
+        max-width: 92px;
+    }
+
+    .green_box:has(+ * +.yellow_box) {
+        max-width: 92px;
+    }
+
+
+    .green_box:hover {
+        max-width: 1920px !important;
+        justify-content: center;
+    }
+
+    .green_box:hover+.blue_box {
+        max-width: 92px;
+    }
+
+    .green_box:hover+*+.yellow_box {
+        max-width: 92px;
+    }
+
+
 }
