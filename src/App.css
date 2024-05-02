@@ -107,9 +107,11 @@
     max-width: 288px;
     justify-content: unset;
 }
-.green_box{
+
+.green_box {
     justify-content: center;
 }
+
 .green_box:hover {
     max-width: 1920px !important;
     justify-content: center;
@@ -130,9 +132,10 @@
 .green_box:has(+.blue_box:hover) .greenshoes {
     transform: rotate(30deg);
 }
+
 .green_box:has(+*+.yellow_box:hover) .greenshoes {
     transform: rotate(30deg);
- 
+
 }
 
 
@@ -227,7 +230,7 @@
     }
 
     .gap-262 {
-        gap: 140px;
+        gap: 20px;
     }
 
     .blue_box:hover+.yellow_box {
